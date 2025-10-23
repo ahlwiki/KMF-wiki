@@ -235,13 +235,13 @@ const knightmareFrames = [
             }
         ],
         image: "https://cdn4.winhlb.com/2025/10/23/68f9ffc327e0d.webp",
-        descriptiondescription: "无赖是由京都 House 制造的格拉斯哥 Knightmare Frame 的改造版本，由黑色骑士团和日本解放战线操作。指定为 Type-1R，无赖在第一次黑色叛乱期间作为反不列颠抵抗组织的主要 Knightmare Frame。",
+        descriptiondescription: "无赖是由京都六家制造的格拉斯哥 Knightmare Frame 的改造版本，由黑色骑士团和日本解放战线操作。指定为 Type-1R，无赖在第一次黑色叛乱期间作为反不列颠抵抗组织的主要 Knightmare Frame。",
         specs: {
             height: "4.37m",
             weight: "7.48t",
             armor: "钨",
             power: "樱石能源块",
-            developer: "京都 House",
+            developer: "京都六家",
             derivedFrom: "格拉斯哥",
             variants: "无赖 Zero 定制型、无赖 改、无赖 实验辐射波型、无赖 定制型"
         },
@@ -276,13 +276,13 @@ const knightmareFrames = [
         type: "量产机",
         pilot: "/",
         image: "https://s21.ax1x.com/2025/10/23/pVXEnQx.webp",
-        descriptiondescription: "无赖是由京都 House 制造的格拉斯哥 Knightmare Frame 的改造版本，由黑色骑士团和日本解放战线操作。指定为 Type-1R，无赖在第一次黑色叛乱期间作为反不列颠抵抗组织的主要 Knightmare Frame。",
+        descriptiondescription: "无赖是由京都六家制造的格拉斯哥 Knightmare Frame 的改造版本，由黑色骑士团和日本解放战线操作。指定为 Type-1R，无赖在第一次黑色叛乱期间作为反不列颠抵抗组织的主要 Knightmare Frame。",
         specs: {
             height: "4.37m",
             weight: "7.48t",
             armor: "钨",
             power: "樱石能源块",
-            developer: "京都 House",
+            developer: "京都六家",
             derivedFrom: "格拉斯哥",
             variants: "无赖 Zero 定制型、无赖 改、无赖 实验辐射波型、无赖 定制型"
         },
@@ -487,7 +487,7 @@ const knightmareFrames = [
         height: "6.94m",
         weight: "14.78t",
         armor: "钨",
-        power: "尤格德拉希尔驱动、能源填充器",
+        power: "樱石能源块",
         developer: "神圣不列颠帝国",
         derivedFrom: "高文、阿格拉万、格洛斯特"
     },
@@ -523,7 +523,7 @@ const knightmareFrames = [
         height: "6.57m",
         weight: "14.57t",
         armor: "钨",
-        power: "尤格德拉希尔驱动、能源填充器",
+        power: "樱石能源块",
         developer: "神圣不列颠帝国、泽文家族",
         derivedFrom: "",
         development: "阿格拉万、加拉哈德、加雷斯、斑鸠、神崎鸥",
@@ -561,7 +561,7 @@ const knightmareFrames = [
         height: "4.45m",
         weight: "7.92t",
         armor: "钨",
-        power: "尤格德拉希尔驱动、能源填充器",
+        power: "樱石能源块",
         developer: "贾巴尔普尔研究中心",
         derivedFrom: "红莲二式、月下原型",
         development: "晓量产型",
@@ -602,9 +602,9 @@ const knightmareFrames = [
         height: "4.45m",
         weight: "7.92t",
         armor: "钨",
-        power: "尤格德拉希尔驱动、能源填充器",
-        developer: "京都 House",
-        derivedFrom: "月下原型、月下"
+        power: "樱石能源块",
+        developer: "京都六家",
+        derivedFrom: "月下"
     },
     equipment: {
         standard: [
@@ -650,7 +650,7 @@ const knightmareFrames = [
         height: "4.24m",
         weight: "7.35t",
         armor: "钨",
-        power: "尤格德拉希尔驱动、能源填充器",
+        power: "樱石能源块",
         developer: "神圣不列颠帝国",
         derivedFrom: "甘尼米德",
         development: "萨瑟兰、Portman、Somerset、Prytwen、Raiko、无赖定制型",
@@ -676,6 +676,6 @@ const knightmareFrames = [
         ]
     },
     design: `<p>受甘尼米德原型机成功的启发，神圣不列颠帝国开始研究将Knightmare Frame用于军事行动。他们的成果是RPI-11格拉斯哥，第一款具备战斗能力的Knightmare。在甘尼米德奠定的基础上，格拉斯哥依靠其小型、轻量化的框架和车身装甲，以及陆地滑行轮进行高速战斗，使其能够侧翼包抄地面部队如坦克和装甲运兵车。</p><p>格拉斯哥还引入了飞燕爪牙，一种有线投射武器，既可以作为抓钩，也可以帮助Knightmare从空中运输工具安全降落，这成为未来几乎所有Knightmare Frame的标准装备。格拉斯哥的武装还包括一把带内置榴弹发射器的突击步枪、一门巨型加农炮火箭发射器和肘部安装的Tonfa棍。这些武器，连同许多其他武器，将成为后来多年大多数量产型Knightmare Frame的标准装备。</p>`,
-    combat: `<p>格拉斯哥的效力在a.t.b. 2010年不列颠入侵日本期间得到证明。格拉斯哥的参与使这场短暂的战争取得了彻底胜利，允许不列颠轻松击败日本军队并接管这个岛国，随后将其更名为11区。入侵七年后，格拉斯哥仍被视为可敬但非常过时，并逐渐停产和退役，以支持更新的第五世代RPI-13萨瑟兰。许多格拉斯哥单位被改装成警察用的Knightpolice，而格拉斯哥的普及意味着它们经常落入反不列颠叛乱团体手中，如黑色骑士团和日本解放战线，甚至落入地下犯罪集团手中。</p><p>格拉斯哥Knightmare被各种日本抵抗组织用作几种"新"设计的基础，包括由京都屋开发的Type-1R无赖和Type-10R无赖改。一些单位甚至被回收用来形成一种强大的机动火炮加农炮，称为雷公炮，通过组合4台格拉斯哥或无赖制成。在驾驶红莲之前，红月卡莲在系列开始时使用了一台定制的红色格拉斯哥，该机在兰斯洛特首次战斗部署时被损坏。然而，在剧集《Refrain》中，它被另一台使用无赖部件修改的红色格拉斯哥所取代。</p>`
+    combat: `<p>格拉斯哥的效力在a.t.b. 2010年不列颠入侵日本期间得到证明。格拉斯哥的参与使这场短暂的战争取得了彻底胜利，允许不列颠轻松击败日本军队并接管这个岛国，随后将其更名为11区。入侵七年后，格拉斯哥仍被视为可敬但非常过时，并逐渐停产和退役，以支持更新的第五世代RPI-13萨瑟兰。许多格拉斯哥单位被改装成警察用的Knightpolice，而格拉斯哥的普及意味着它们经常落入反不列颠叛乱团体手中，如黑色骑士团和日本解放战线，甚至落入地下犯罪集团手中。</p><p>格拉斯哥Knightmare被各种日本抵抗组织用作几种"新"设计的基础，包括由京都六家开发的Type-1R无赖和Type-1RC无赖改。一些单位甚至被回收用来形成一种强大的机动火炮加农炮，称为雷公炮，通过组合4台格拉斯哥或无赖制成。在驾驶红莲之前，红月卡莲在系列开始时使用了一台定制的红色格拉斯哥，该机在兰斯洛特首次战斗部署时被损坏。然而，在剧集《Refrain》中，它被另一台使用无赖部件修改的红色格拉斯哥所取代。</p>`
 }
 ];
