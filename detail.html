@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>机体详情 - Code Geass 机甲图鉴</title>
+    <link rel="shortcut icon" href="Site-favicon.ico" />
+    <link rel="icon" href="Site-favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Knightmare Frame 图鉴</a>
+            <div class="nav-links">
+                <a href="index.html">机体图鉴</a>
+                <a href="#factions">阵营</a>
+                <a href="#timeline">时间线</a>
+                <a href="#comparison">机体对比</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="detail-container">
+        <a href="index.html" class="back-btn">← 返回图鉴</a>
+        
+        <div class="detail-header">
+            <div class="detail-name-container">
+                <h1 class="detail-name" id="detail-name">加载中...</h1>
+                <h2 class="detail-name-en" id="detail-name-en">Loading...</h2>
+            </div>
+            
+            <div class="detail-content-row">
+                <!-- 修改图片区域为选项卡结构 -->
+                <div class="detail-image-section">
+                    <div class="image-tabs-container">
+                        <!-- 动态生成的图片选项卡 -->
+                        <div class="image-tabs" id="image-tabs"></div>
+                        <div class="image-display">
+                            <img id="detail-image" src="" alt="机体图片">
+                            <!-- 移除了图片下方的描述 -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tables-container">
+                    <!-- 原有的技术规范表格 -->
+                    <div class="specs-section">
+                        <h2>技术规范</h2>
+                        <table class="specs-table">
+                            <tr>
+                                <td class="spec-label">类型</td>
+                                <td id="spec-type" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">型号</td>
+                                <td id="spec-model" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">世代</td>
+                                <td id="spec-generation" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">高度</td>
+                                <td id="spec-height" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">重量</td>
+                                <td id="spec-weight" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">能源</td>
+                                <td id="spec-power" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">装甲材料</td>
+                                <td id="spec-armor" class="spec-value">-</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!-- 原有的一般数据表格 -->
+                    <div class="specs-section">
+                        <h2>一般数据</h2>
+                        <table class="specs-table">
+                            <tr>
+                                <td class="spec-label">制造商</td>
+                                <td id="spec-developer" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">衍生自</td>
+                                <td id="spec-derived-from" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">发展型号</td>
+                                <td id="spec-development" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">变体型号</td>
+                                <td id="spec-variants" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">阵营</td>
+                                <td id="spec-faction" class="spec-value">-</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-label">驾驶员</td>
+                                <td id="spec-pilot" class="spec-value">-</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 其余内容保持不变 -->
+        <div class="detail-content">
+            <div class="description-section">
+                <div id="frame-description" class="description-text"></div>
+            </div>
+            
+            <hr class="section-divider">
+            
+            <h2>装备</h2>
+            <div class="equipment-section">
+                <h3>标准装备</h3>
+                <div id="standard-equipment" class="equipment-list"></div>
+                
+                <h3>可选装备</h3>
+                <div id="optional-equipment" class="equipment-list"></div>
+            </div>
+            
+            <h2>标准武器</h2>
+            <div class="weapons-section">
+                <h3>固定式武器</h3>
+                <div id="fixed-weapons" class="weapons-list"></div>
+                
+                <h3>手持式武器</h3>
+                <div id="handheld-weapons" class="weapons-list"></div>
+                
+                <h3>可选武器</h3>
+                <div id="optional-weapons" class="weapons-list"></div>
+            </div>
+            
+            <h2>设计和发展</h2>
+            <div class="history-text" id="design-content"></div>
+            
+            <h2>作战记录</h2>
+            <div class="history-text" id="combat-content"></div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>

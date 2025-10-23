@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Geass 机甲图鉴</title>
+    <link rel="shortcut icon" href="Site-favicon.ico" />
+    <link rel="icon" href="Site-favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Knightmare Frame 图鉴</a>
+            <div class="nav-links">
+                <a href="index.html">机体图鉴</a>
+                <a href="#factions">阵营</a>
+                <a href="#timeline">时间线</a>
+                <a href="#comparison">机体对比</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 筛选区域 -->
+        <section class="filters-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>阵营:</label>
+                    <select id="faction-filter">
+                        <option value="">全部阵营</option>
+                        <option value="britannia">不列颠尼亚</option>
+                        <option value="black-knights">黑色骑士团</option>
+                        <option value="japan">日本解放战线</option>
+                        <option value="chinese">中华联邦</option>
+                        <option value="eu">EU</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>世代:</label>
+                    <select id="generation-filter">
+                        <option value="">全部世代</option>
+                        <option value="3">第3世代</option>
+                        <option value="4">第4世代</option>
+                        <option value="5">第5世代</option>
+                        <option value="6">第6世代</option>
+                        <option value="7">第7世代</option>
+                        <option value="8">第8世代</option>
+                        <option value="9">第9世代</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>类型:</label>
+                    <select id="type-filter">
+                        <option value="">全部类型</option>
+                        <option value="mass">量产机</option>
+                        <option value="special">专用机</option>
+                        <option value="command">指挥官机</option>
+                        <option value="prototype">试作机</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group search-box">
+                    <input type="text" id="search-input" placeholder="搜索机体名称或型号...">
+                </div>
+                
+                <div class="stats">
+                    找到 <span id="result-count">0</span> 台机体
+                </div>
+            </div>
+        </section>
+
+        <!-- 图鉴网格 -->
+        <section id="gallery" class="frames-grid">
+            <!-- 动态生成的机体卡片 -->
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
