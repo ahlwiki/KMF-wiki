@@ -17,6 +17,39 @@ function getFactionName(faction) {
     return factionMap[faction] || faction;
 }
 
+// 全局变量记录已加载的图片
+let loadedImages = new Set();
+
+// 图片加载函数
+function loadImage(url, imageElement, loadingElement) {
+    // 如果图片已经加载过，直接显示
+    if (loadedImages.has(url)) {
+        imageElement.src = url;
+        loadingElement.style.display = 'none';
+        imageElement.style.display = 'block';
+        return;
+    }
+    
+    const img = new Image();
+    img.onload = function() {
+        imageElement.src = url;
+        loadedImages.add(url);
+        loadingElement.style.display = 'none';
+        imageElement.style.display = 'block';
+    };
+    
+    img.onerror = function() {
+        loadingElement.innerHTML = `
+            <div class="loading-text">
+                <div>图片加载失败</div>
+                <div style="font-size: 0.8rem; margin-top: 0.5rem;">请检查网络连接</div>
+            </div>
+        `;
+    };
+    
+    img.src = url;
+}
+
 // 加载机体详情
 function loadFrameDetail() {
     const frameId = getFrameIdFromURL();
@@ -80,6 +113,7 @@ function renderFrameDetail(frame) {
 function renderImageTabs(frame) {
     const tabsContainer = document.getElementById('image-tabs');
     const imageElement = document.getElementById('detail-image');
+    const loadingElement = document.getElementById('image-loading');
     
     // 清空现有内容
     tabsContainer.innerHTML = '';
@@ -97,11 +131,14 @@ function renderImageTabs(frame) {
         }];
     }
     
+    // 显示加载提示，隐藏图片
+    loadingElement.style.display = 'flex';
+    imageElement.style.display = 'none';
+    
     // 如果只有一张图片，不显示选项卡，直接显示图片
     if (images.length === 1) {
         tabsContainer.style.display = 'none'; // 隐藏选项卡容器
-        imageElement.src = images[0].url;
-        imageElement.alt = frame.name_zh;
+        loadImage(images[0].url, imageElement, loadingElement);
         return;
     }
     
@@ -121,9 +158,11 @@ function renderImageTabs(frame) {
             document.querySelectorAll('.image-tab').forEach(t => t.classList.remove('active'));
             // 为当前选项卡添加active类
             tab.classList.add('active');
+            // 显示加载提示
+            loadingElement.style.display = 'flex';
+            imageElement.style.display = 'none';
             // 更新图片
-            imageElement.src = image.url;
-            imageElement.alt = `${frame.name_zh} - ${image.description}`;
+            loadImage(image.url, imageElement, loadingElement);
         });
         
         tabsContainer.appendChild(tab);
@@ -131,8 +170,7 @@ function renderImageTabs(frame) {
     
     // 设置第一张图片为默认显示
     if (images.length > 0) {
-        imageElement.src = images[0].url;
-        imageElement.alt = `${frame.name_zh} - ${images[0].description}`;
+        loadImage(images[0].url, imageElement, loadingElement);
     }
 }
 
@@ -282,5 +320,11 @@ function showError(message) {
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
+    // 隐藏页面加载提示
+    const pageLoading = document.getElementById('page-loading');
+    if (pageLoading) {
+        pageLoading.style.display = 'none';
+    }
+    
     loadFrameDetail();
 });
