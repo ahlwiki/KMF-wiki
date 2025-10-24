@@ -9,6 +9,7 @@ class KnightmareDatabase {
             type: '',
             search: ''
         };
+        this.spriteLoaded = false; // 雪碧图加载状态
     }
 
     // 应用筛选
@@ -65,37 +66,62 @@ class KnightmareDatabase {
         });
     }
 
-// 创建机体卡片
-createFrameCard(frame) {
-    const card = document.createElement('a');
-    card.className = 'frame-card';
-    card.href = `detail.html?id=${frame.id}`;
-    
-    // 检测是否为移动端
-    const isMobile = window.innerWidth <= 768;
-    
-    // 计算雪碧图背景位置
-    // 桌面端：150x150px 每个，移动端：75x75px 每个
-    const spriteSize = isMobile ? 75 : 150;
-    const spritePosition = -spriteSize * (frame.id - 1);
-    
-    card.innerHTML = `
-        <div class="frame-image-container">
-            <div class="frame-image sprite-image" style="background-position: 0 ${spritePosition}px;"></div>
-        </div>
-        <div class="frame-info">
-            <h3>${frame.name_zh}</h3>
-            <p class="model">${frame.model}</p>
-            <div class="badges">
-                <span class="faction-badge ${frame.faction}-badge">${this.getFactionName(frame.faction)}</span>
-                <span class="generation-badge">${frame.generation}</span>
+    // 创建机体卡片
+    createFrameCard(frame) {
+        const card = document.createElement('a');
+        card.className = 'frame-card';
+        card.href = `detail.html?id=${frame.id}`;
+        
+        // 检测是否为移动端
+        const isMobile = window.innerWidth <= 768;
+        
+        // 计算雪碧图背景位置
+        // 桌面端：150x150px 每个，移动端：75x75px 每个
+        const spriteSize = isMobile ? 75 : 150;
+        const spritePosition = -spriteSize * (frame.id - 1);
+        
+        card.innerHTML = `
+            <div class="frame-image-container">
+                <!-- 添加雪碧图加载提示 -->
+                <div class="sprite-loading" style="display: flex;">
+                    <div class="sprite-loading-spinner"></div>
+                    <div>加载中...</div>
+                </div>
+                <div class="frame-image sprite-image" style="background-position: 0 ${spritePosition}px; display: none;"></div>
             </div>
-            <p class="pilot">驾驶员: ${frame.pilot}</p>
-        </div>
-    `;
+            <div class="frame-info">
+                <h3>${frame.name_zh}</h3>
+                <p class="model">${frame.model}</p>
+                <div class="badges">
+                    <span class="faction-badge ${frame.faction}-badge">${this.getFactionName(frame.faction)}</span>
+                    <span class="generation-badge">${frame.generation}</span>
+                </div>
+                <p class="pilot">驾驶员: ${frame.pilot}</p>
+            </div>
+        `;
 
-    return card;
-}
+        // 预加载雪碧图
+        const spriteImage = new Image();
+        spriteImage.src = 'https://cdn4.winhlb.com/2025/10/25/68fbc7c8bac53.png';
+        spriteImage.onload = () => {
+            const loadingElement = card.querySelector('.sprite-loading');
+            const imageElement = card.querySelector('.frame-image');
+            if (loadingElement && imageElement) {
+                loadingElement.style.display = 'none';
+                imageElement.style.display = 'block';
+            }
+            this.spriteLoaded = true;
+        };
+        
+        spriteImage.onerror = () => {
+            const loadingElement = card.querySelector('.sprite-loading');
+            if (loadingElement) {
+                loadingElement.innerHTML = '<div>图片加载失败</div>';
+            }
+        };
+
+        return card;
+    }
 
     // 获取阵营中文名称
     getFactionName(faction) {
@@ -118,6 +144,12 @@ createFrameCard(frame) {
 
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
+    // 隐藏页面加载提示
+    const pageLoading = document.getElementById('page-loading');
+    if (pageLoading) {
+        pageLoading.style.display = 'none';
+    }
+    
     const database = new KnightmareDatabase();
     database.renderGallery();
     database.updateResultCount();
