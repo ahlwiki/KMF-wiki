@@ -318,11 +318,11 @@ const knightmareFrames = [
         pilot: "藤堂镜志朗、朝比奈省悟、千叶凪沙、仙波崚河、卜部巧雪",
         images: [
             {
-                url: "https://cdn4.winhlb.com/2025/10/23/68f9fb561e62a.webp",
+                url: "https://s21.ax1x.com/2025/10/25/pVXwGqK.webp",
                 description: "四圣剑配色"
             },
             {
-                url: "https://cdn4.winhlb.com/2025/10/23/68f9fb5631088.webp", 
+                url: "https://s21.ax1x.com/2025/10/25/pVXwYVO.webp", 
                 description: "藤堂配色"
             }
         ],
