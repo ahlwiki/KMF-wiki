@@ -650,19 +650,19 @@ const knightmareFrames = [
         pilot: "尤菲米娅·li·不列颠、吉尔伯特·G·P·吉尔福德、安德烈亚斯·达顿、阿尔弗雷德·G·达顿、巴特·L·达顿、克劳迪奥·S·达顿、大卫·T·达顿、埃德加·N·达顿、基诺·温伯格、卢西亚诺·布拉德利",
         images: [
             {
-                url: "https://static.wikia.nocookie.net/codegeass/images/9/90/RPI-209_Normal_Type.jpg/revision/latest?cb=20170507143238",
+                url: "https://cdn4.winhlb.com/2025/10/27/68fe91e69fcbd.webp",
                 description: "标准版"
             },
             {
-                url: "https://static.wikia.nocookie.net/codegeass/images/9/93/Gloucester_-_Line_Art.jpg/revision/latest?cb=20180629214916",
+                url: "https://cdn4.winhlb.com/2025/10/27/68fe91e785321.webp",
                 description: "带披风标准版"
             },
             {
-                url: "https://static.wikia.nocookie.net/codegeass/images/1/1e/Rpi-209-royalguard.jpg/revision/latest?cb=20091211033940",
+                url: "https://cdn4.winhlb.com/2025/10/27/68fe91e69bc35.webp",
                 description: "皇家卫队配色"
             },
             {
-                url: "https://static.wikia.nocookie.net/codegeass/images/9/90/Rpi-209-glaston.jpg/revision/latest?cb=20091211034134",
+                url: "https://cdn4.winhlb.com/2025/10/27/68fe91e69aa2a.webp",
                 description: "格拉斯顿骑士团"
             }
         ],
