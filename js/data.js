@@ -672,7 +672,7 @@ const knightmareFrames = [
             height: "4.29m",
             weight: "7.75t",
             armor: "钨",
-            power: "由能源填充器驱动的尤格德拉希尔驱动",
+            power: "樱石能源块",
             developer: "神圣不列颠帝国",
             derivedFrom: "萨瑟兰"
         },
