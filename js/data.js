@@ -188,7 +188,7 @@ const knightmareFrames = [
         images: [
             {
                 url: "https://cdn4.winhlb.com/2025/10/23/68f9ffc327e0d.webp",
-                description: "黑骑配色"
+                description: "黑色骑士团配色"
             },
             {
                 url: "https://cdn4.winhlb.com/2025/10/23/68f9ffc350c62.webp", 
@@ -404,7 +404,7 @@ const knightmareFrames = [
     },
     {
         id: 10,
-        name_zh: "甘尼米德（木卫三）",
+        name_zh: "盖尼米德（木卫三）",
         name_en: "Ganymede",
         model: "YF6-X7K/E",
         faction: "britannia",
@@ -992,7 +992,7 @@ const knightmareFrames = [
     },
     {
         id: 24,
-        name_zh: "兰斯洛特阿尔比昂",
+        name_zh: "兰斯洛特 阿尔比昂",
         name_en: "Lancelot Albion",
         model: "Z-01Z",
         faction: "britannia",
@@ -1029,5 +1029,246 @@ const knightmareFrames = [
         },
         design: `<p>由卡梅洛特开发，这台新构建的机体作为实验性Knightmare兰斯洛特的第九世代版本，继承了许多前代元素。它具有与红莲圣天八极式相媲美的机动性和火力。除了红莲外，阿尔比昂是该系列唯一的其他第九世代KMF。它是鲁路修领导的不列颠最强KMF。</p><p>装备包括：陆地滑行系统（用于高速移动和 pivot 转弯）、光辉盾牌发生器（通过库仑场超压缩创建空间，形成能量装甲）、能量翼（应用光辉盾牌和浮空理论，通过振荡6个光束翼实现超高速飞行，可作为盾牌和释放匕首状粒子攻击）、驾驶舱（常规后倾式，适合长期作战）、事实球（多信息收集系统，包括主动/被动传感器和声学拾取）。</p>`,
         combat: `<p>兰斯洛特阿尔比昂在针对鲁路修皇帝的反叛行动中首次亮相，其优越能力使朱雀迅速击败对手，除了基诺·温伯格。随后参与鲁路修绑架U.F.N.成员的行动，提供掩护。在富士山上空的最终战斗中，朱雀与藤堂镜志朗的斩月交战，斩月不敌被毁。在阿瓦隆沉没后，朱雀、鲁路修和小队试图登上达摩克利斯，使用F.L.E.I.J.A.消除器与神虎协作解除一枚F.L.E.I.J.A.弹头。小队突破空中堡垒的光辉盾牌后，内部遭遇基诺的重建崔斯坦分离者伏击。朱雀与基诺决斗获胜，但达摩克利斯护盾受损，允许卡莲的红莲圣天八极式介入。双方反复冲突，红莲的辐射波臂弹药耗尽，阿尔比昂的光辉盾牌发生器能量耗尽，最终陷入僵局。兰斯洛特阿尔比昂胸部受重创，在红莲失去手臂和头部坠落时，阿尔比昂最终在爆炸中摧毁。</p>`
+    },
+    {
+        id: 25,
+        name_zh: "兰斯洛特 征服者",
+        name_en: "Lancelot Conquista",
+        model: "Z-01/DF",
+        faction: "britannia",
+        generation: "第7世代",
+        type: "专用机",
+        pilot: "枢木朱雀",
+        image: "https://cdn4.winhlb.com/2025/10/28/6900dcd8b8011.webp",
+        description: "在第二季中，兰斯洛特的更新版本称为兰斯洛特征服者，被授予第七骑士枢木朱雀。它因附加在浮空系统上的蓝色加农炮 mount 而得名'Conquista Unit'。",
+        specs: {
+            height: "5.06m",
+            weight: "8.95t",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "卡梅洛特",
+            derivedFrom: "兰斯洛特"
+        },
+        equipment: {
+            standard: [
+                { name: "光辉盾牌系统", description: "产生能量屏障防御攻击" },
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" },
+                { name: "事实球传感器", description: "多信息收集系统，提供集成信息给驾驶员" },
+                { name: "集成浮空系统", description: "提供飞行能力" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "4 × 飞燕爪牙", description: "" },
+                { name: "1 × Hadron冲击炮", description: "" }
+            ],
+            handheld: [
+                { name: "2 × 微波振动剑", description: "高频振荡，可切割几乎所有物体" },
+                { name: "1 × VARIS步枪", description: "可变弹药排斥冲击步枪，能适应任何情况" },
+                { name: "1 × 6管导弹发射盾", description: "" }
+            ],
+            optional: [
+                { name: "1 × F.L.E.I.J.A.发射器", description: "" }
+            ]
+        },
+        design: `<p>浮空系统背包现在是标准装备。征服者获得Hadron冲击炮，安装在浮空系统顶部，通过将其VARIS步枪停靠在附加在浮空系统上的较大加农炮 mount 下方来发射。其独特的Core Luminous已被调整和精炼，增加了战斗中的功率，并配备了对抗Knightmare禁用Gefjun干扰器的部分防御措施。征服者在腿部和胸部有三个额外的光辉盾牌。腿部盾牌增加了踢击的效果。胸部还有四个次要发射器，可以形成"Core Luminous Cone"，一个圆锥形屏障，延伸至兰斯洛特前方几英尺，与普通屏蔽的平坦性质相反。</p>`,
+        combat: `<p>在第二季中，兰斯洛特征服者被授予第七骑士枢木朱雀。它在第二次东京定居点战斗中严重受损，在与红莲圣天八极式遭遇后。Hadron冲击炮被切成两半，双腿和左臂被切断，胸部装甲也受损。</p>`
+    },
+    {
+        id: 26,
+        name_zh: "兰斯洛特 边境",
+        name_en: "Lancelot Frontier",
+        model: "Z-01/A",
+        faction: "britannia",
+        generation: "第7世代",
+        type: "专用机",
+        pilot: "C.C.",
+        image: "https://cdn4.winhlb.com/2025/10/28/6900dcd7aae1f.webp",
+        description: "兰斯洛特边境是一种Knightmare Frame，特别是兰斯洛特的变体，为C.C.在鲁路修成为不列颠皇帝时使用。它被涂成粉色以区别于原版。",
+        specs: {
+            height: "4.49m",
+            weight: "6.89t",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "卡梅洛特",
+            derivedFrom: "兰斯洛特"
+        },
+        equipment: {
+            standard: [
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" },
+                { name: "光辉盾牌系统", description: "产生能量屏障防御攻击" },
+                { name: "事实球传感器", description: "" },
+                { name: "陆地滑行推进系统", description: "利用脚跟处的动力轮大幅提升KMF的机动性" }
+            ],
+            optional: [
+                { name: "浮空系统", description: "提供飞行能力" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "4 × 飞燕爪牙", description: "" }
+            ],
+            handheld: [
+                { name: "2 × 微波振动剑", description: "高频振荡，可切割几乎所有物体" },
+                { name: "1 × VARIS步枪", description: "可变弹药排斥冲击步枪，能适应任何情况" },
+                { name: "1 × 6管导弹发射盾", description: "" }
+            ]
+        },
+        design: `<p>虽然原版兰斯洛特是高性能机器，但兰斯洛特边境略弱于原版，因为它是由备用和回收部件制成的。然而，与原版兰斯洛特不同，这一台拥有驾驶舱弹射系统。尽管性能较弱，它拥有与原版兰斯洛特相同的所有武器，但也使用了导弹发射盾，类似于珀西瓦尔。</p>`,
+        combat: `<p>兰斯洛特阿尔比昂在针对鲁路修皇帝的反叛行动中首次亮相，其优越能力使朱雀迅速击败对手，除了基诺·温伯格。随后参与鲁路修绑架U.F.N.成员的行动，提供掩护。在富士山上空的最终战斗中，朱雀与藤堂镜志朗的斩月交战，斩月不敌被毁。在阿瓦隆沉没后，朱雀、鲁路修和小队试图登上达摩克利斯，使用F.L.E.I.J.A.消除器与神虎协作解除一枚F.L.E.I.J.A.弹头。小队突破空中堡垒的光辉盾牌后，内部遭遇基诺的重建崔斯坦分离者伏击。朱雀与基诺决斗获胜，但达摩克利斯护盾受损，允许卡莲的红莲圣天八极式介入。双方反复冲突，红莲的辐射波臂弹药耗尽，阿尔比昂的光辉盾牌发生器能量耗尽，最终陷入僵局。兰斯洛特阿尔比昂胸部受重创，在红莲失去手臂和头部坠落时，阿尔比昂最终在爆炸中摧毁。</p>`
+    },
+    {
+        id: 27,
+        name_zh: "莫德雷德",
+        name_en: "Mordred",
+        model: "RZA-6DG",
+        faction: "britannia",
+        generation: "第7世代",
+        type: "专用机",
+        pilot: "安尼亚·阿尔斯特雷姆、玛丽安娜·vi·不列颠",
+        image: "https://cdn4.winhlb.com/2025/10/28/6900d70cd5e49.webp",
+        description: "莫德雷德是以圆桌骑士命名的重炮击型Knightmare Frame，由第六骑士安尼亚·阿尔斯特雷姆驾驶。",
+        specs: {
+            height: "4.71m",
+            weight: "10.23t",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "卡梅洛特",
+            derivedFrom: "Zetland、Zetland Schild",
+            development: "Mordred Buildup"
+        },
+        equipment: {
+            standard: [
+                { name: "集成浮空系统", description: "提供飞行能力" },
+                { name: "光辉盾牌系统", description: "产生能量屏障防御攻击" },
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "4 × 肩部安装Hadron加农炮", description: "可展开合并为四管加农炮，称为Stark Hadron Cannon" },
+                { name: "116 × 微型近程导弹发射器", description: "从手腕、胸部、髋部和腿部发射" }
+            ]
+        },
+        design: `<p>莫德雷德拥有集成浮空系统，使其能够飞行。它牺牲速度换取厚装甲，使其非常耐用；能够承受月下的花天狂骨刀直接命中而无划痕（见于太平洋伏击行动），而任何其他Knightmare都会被切成两半。但浮空系统则不然，可以轻松被切断（见于激情之力）。同时，它成为除兰斯洛特外首批接收光辉盾牌系统的Knightmare之一，进一步增加了防御力。与原始兰斯洛特系统仅覆盖手臂相比，莫德雷德的光辉盾牌可以包裹整个单位。</p><p>它拥有两套Hadron加农炮安装在每个肩部，可展开合并为四管加农炮，称为Stark Hadron Cannon，将它们的威力集中到单一爆炸中，能够一击 obliterate 空中巡洋舰。该武器通常用于大型目标、强大对手或直线火力内的敌人。它也可用于诱捕敌人，使加农炮能够对那个敌人施加压力（见于最终战斗东京II）。为了同时攻击多个目标（如果它们小和/或分散在战场不同部分）或快速移动的目标，莫德雷德还拥有微型近程导弹，从手腕、胸部、髋部和腿部发射，移动时留下黑色和红色轨迹。尽管缺乏近程武器，莫德雷德的原始力量使其能够轻松粉碎其他较小Knightmare。</p>`,
+        combat: `<p>它参与了多次战斗，包括第二次袭击东京定居点和富士山战斗。莫德雷德在最后一集（Re;）中被杰里米亚·戈特瓦尔德的萨瑟兰齐格的残骸严重损坏，双臂和头部被炸掉；驾驶舱被破坏并暴露，但损坏并不太严重，因为集成浮空系统仍然功能正常。</p>`
+    },
+    {
+        id: 28,
+        name_zh: "MR-1",
+        name_en: "MR-1",
+        model: "",
+        faction: "britannia",
+        generation: "民用",
+        type: "量产机",
+        pilot: "扇要、基诺·温伯格",
+        images: [
+            {
+                url: "https://cdn4.winhlb.com/2025/10/28/6900d70de5f0c.webp",
+                description: "阿什福德学园配色"
+            },
+            {
+                url: "https://cdn4.winhlb.com/2025/10/28/6900d70d5cd6f.webp",
+                description: "黑色骑士团配色"
+            }
+        ],
+        image: "https://cdn4.winhlb.com/2025/10/28/6900d70de5f0c.webp",
+        description: "MR-1是一种基本的非战斗Knightmare，可以折叠成更紧凑的形式。",
+        specs: {
+            height: "4.35m",
+            weight: "7.20t",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "神圣不列颠帝国",
+            development: "萨默塞特"
+        },
+        equipment: {
+            standard: [
+                { name: "陆地滑行推进系统", description: "利用脚跟处的动力轮大幅提升KMF的机动性" },
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "2 × 胸部安装飞燕爪牙", description: "" }
+            ]
+        },
+        design: `<p>MR-1是一种为民用设计的Knightmare Frame，其大部分装甲已被剥离。作为非战斗Knightmare，MR-1除了两个胸部安装的飞燕爪牙外没有任何进攻性武器。它唯一其他特征是陆地滑行推进系统和驾驶舱弹射系统。其性能相当于第四世代模型。</p>`,
+        combat: `<p>在第一季中，黑色骑士团使用一台黑白配色的MR-1救援枢木朱雀。它由扇要驾驶，但被库埃鲁·索雷西摧毁。在第二季中，阿什弗德学院使用紫黄配色的模型代替甘尼米德。在纪念第七骑士枢木朱雀的节日期间，第二次尝试制作世界上最大的披萨；原本计划由朱雀驾驶的MR-1被基诺·温伯格征用。当鲁路修启动灭火器隐藏C.C.的存在时，披萨再次被毁。</p>`
+    },
+    {
+        id: 29,
+        name_zh: "装甲黄蜂",
+        name_en: "Panzer Hummel",
+        model: "Mk3-E2E8",
+        faction: "eu",
+        generation: "第4世代",
+        type: "量产机",
+        pilot: "欧洲士兵",
+        image: "https://cdn4.winhlb.com/2025/10/28/6900d70e56221.webp",
+        description: "装甲黄蜂是欧洲联盟成员国使用的量产型Knightmare Frame，首次在第二季引入。它是为欧盟军队创建的首台KMF，具有高火力但机动性较慢，在与其它KMF战斗中处于劣势。",
+        specs: {
+            height: "",
+            weight: "",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "欧洲联盟"
+        },
+        equipment: {
+            standard: [
+                { name: "陆地滑行推进系统", description: "利用脚跟处的动力轮大幅提升KMF的机动性" },
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "2 × 臂装自动加农炮", description: "" },
+                { name: "2 × 髋装机枪", description: "" },
+                { name: "2 × 胸部安装3管导弹荚舱", description: "" },
+                { name: "2 × 髋部安装飞燕爪牙", description: "" }
+            ]
+        },
+        design: `<p>装甲黄蜂拥有两门安装在手臂位置的自动加农炮、两门附着在髋部的机枪、六个分为两组的导弹发射器和两个安装在髋部的飞燕爪牙。它们比萨瑟兰更具机动性，但由于缺乏适当的肢体，很可能无法进行徒手战斗。</p><p>虽然大多数不列颠的Knightmare Frame在近程和远程战斗之间基本平衡，但欧洲联盟设计了一种仅专注于远程战斗的Knightmare Frame。即便如此，它们具有 exceptional 防御能力，在欧盟和不列颠之间的战争中守住了El Alamein防线。</p><p>头部部分：两个相同形状的盘状单位安装在看起来像眼睛的机身顶部。这是欧盟无法开发像事实球那样具有先进信息收集和分析能力的系统的权宜之计。由于每个眼睛是独立的，即使只剩一个也能保持操作有效性。尽管它们的临时采用意味着存在一些盲点可以利用。</p><p>身体部分：背部有驾驶舱 compartment 的结构看起来与不列颠军方对应物相同，特别是带有驼峰，但不知道是否有弹射系统。它有两个三单元弹出式导弹 built into 每侧。看到Knightmare Frame装备内置导弹是罕见的。</p><p>腿部部分/飞燕爪牙：这台机器的腿部不适合行走，在战斗期间装甲黄蜂将使用隐藏在其腿部鞋底下的陆地滑行系统。尽管它在大腿上装备了机枪和飞燕爪牙，但它仍然对常规KMF对手处于劣势，因此必须在敌人无法利用其缺乏机动性的地方战斗。</p><p>加农炮：它拥有两门大型加农炮固定 attached 到双臂。这是这台机器的主要武器，适合从中到长程攻击，甚至能够进行间接射击。尽管由于包括加农炮在内的武装而具有 great 火力，但由于未装备五指操纵器，其多功能性和近战能力较低，这是其无法与不列颠Knightmare Frame竞争的原因之一。</p>`,
+        combat: `<p>该单位首次出现在第二季第三集，一大 division 的装甲黄蜂几乎 decimated 不列颠部队（主要由萨瑟兰和格洛斯特组成）以防止在欧洲大陆的两栖登陆，直到朱雀和他的兰斯洛特出现并摧毁了它们 all。当联合国在联合国一号决议中成立时，几个欧盟国家加入了该组织，将其装甲黄蜂添加到黑色骑士团的反不列颠部队中。在 initial 袭击鹿儿岛定居点期间，在黎星刻的部队中也看到一台。</p><p>在《Code Geass: Lelouch of the Re;surrection》中，一些在电影开始时绑架Zero（朱雀）和娜娜莉的部队中看到。</p>`
+    },
+    {
+        id: 30,
+        name_zh: "珀西瓦尔",
+        name_en: "Percival",
+        model: "RZA-10JS",
+        faction: "britannia",
+        generation: "第7世代",
+        type: "专用机",
+        pilot: "卢西亚诺·布拉德利",
+        image: "https://cdn4.winhlb.com/2025/10/28/6900d70e11bea.webp",
+        description: "珀西瓦尔是以圆桌骑士命名的Knightmare Frame，由第十骑士卢西亚诺·布拉德利驾驶。它参与了鹿儿岛定居点战斗和第二次袭击东京定居点，但被红莲圣天八极式摧毁。",
+        specs: {
+            height: "5.13m",
+            weight: "9.07t",
+            armor: "钨",
+            power: "樱石能源块",
+            developer: "卡梅洛特"
+        },
+        equipment: {
+            standard: [
+                { name: "驾驶舱弹射系统", description: "利用火箭助推器使驾驶舱与KMF分离" },
+                { name: "陆地滑行推进系统", description: "利用脚跟处的动力轮大幅提升KMF的机动性" },
+                { name: "集成浮空系统", description: "提供飞行能力" },
+                { name: "事实球传感器", description: "" },
+                { name: "光辉盾牌系统", description: "产生能量屏障防御攻击" }
+            ]
+        },
+        weapons: {
+            fixed: [
+                { name: "右臂安装四爪/MVS光辉钻枪", description: "爪子可重新配置并旋转，生成光辉盾牌场并将手臂转变为MVS粒子钻枪" },
+                { name: "3 × 飞燕爪牙（2×肩部安装、1×头部安装）", description: "" },
+                { name: "2 × 髋部安装Hadron冲击炮", description: "" }
+            ],
+            handheld: [
+                { name: "1 × 左手持6管导弹发射盾", description: "" }
+            ]
+        },
+        design: `<p>从兰斯洛特征服者的"Core Luminous Cone"、萨瑟兰的骑枪和高文的Hadron加农炮中汲取灵感，这台Knightmare Frame基于那些武装建造了类似的武器。其装甲异常笨重，具有从手腕延伸的大型圆锥、髋部和脚部的尖刺腿甲，以及从肩部和陆地滑行系统伸出的尖刺。它还有一个集成浮空系统用于飞行能力。珀西瓦尔的主要武器是右腕上的一个大爪。爪子可以重新配置并旋转，生成一个光辉盾牌场并将手臂转变为MVS粒子钻枪。它还可以使用头部和肩部的飞燕爪牙进行近程战斗。对于远程攻击，珀西瓦尔的尖刺髋甲可以打开，露出里面的Hadron冲击炮，以及其盾牌中的导弹发射器。</p>`,
+        combat: `<p>珀西瓦尔参与了许多对抗不列颠敌人的战斗。在首次登场时，它轻松攻击并摧毁了一艘U.F.N.飞艇，随后使用Hadron冲击炮摧毁了五台晓单位，并在近距离用钻枪摧毁了第六台。随后在女武神中队的帮助下，抓住一艘严重受损的不列颠浮空战舰并将其扔向大龙胆，但被黎星刻和他的神虎阻止。在听到黑色骑士团攻击东京定居点的消息后，他和女武神中队被派遣到那个战场。在莫德雷德未能摧毁神虎后，女武神中队迅速用他们的飞燕爪牙抓住Zero的个人Knightmare Frame的手臂和腿，而珀西瓦尔试图刺穿其盾牌。随后它被三台由玉城真一郎带领的晓单位攻击，但卢西亚诺迅速用他的导弹盾处理了这三台。当Zero试图反击时，珀西瓦尔刺向其胸部，卢西亚诺知道必须降低盾牌才能让神虎使用其主要武器。当他即将杀死Zero时，红莲圣天八极式迅速飞入，一举摧毁女武神中队，拯救了Zero和他的神虎。经过短暂对峙，红月卡莲和她的红莲迅速解除了布拉德利的珀西瓦尔的武装，并在短暂嘲讽后，杀死了布拉德利并完全焚毁了珀西瓦尔。</p><p>珀西瓦尔使用的相同导弹盾为兰斯洛特边境制造并使用，由C.C.驾驶。</p>`
     }
 ];
