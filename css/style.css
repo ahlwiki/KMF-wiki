@@ -155,7 +155,6 @@ select, input {
 
 /* 雪碧图样式 */
 .sprite-image {
-    background-image: url('https://cdn4.winhlb.com/2025/10/25/68fbc7c8bac53.png');
     background-repeat: no-repeat;
     background-size: 100% auto; /* 保持雪碧图宽度100%，高度自动适应 */
     width: 100%;
