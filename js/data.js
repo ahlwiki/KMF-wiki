@@ -1157,19 +1157,19 @@ const knightmareFrames = [
         id: 28,
         name_zh: "MR-1",
         name_en: "MR-1",
-        model: "",
-        faction: "britannia",
-        generation: "民用",
+        model: "MR-1",
+        faction: "black-knights",
+        generation: "第4世代",
         type: "量产机",
         pilot: "扇要、基诺·温伯格",
         images: [
             {
-                url: "https://cdn4.winhlb.com/2025/10/28/6900d70de5f0c.webp",
-                description: "阿什福德学园配色"
-            },
-            {
                 url: "https://cdn4.winhlb.com/2025/10/28/6900d70d5cd6f.webp",
                 description: "黑色骑士团配色"
+            },
+            {
+                url: "https://cdn4.winhlb.com/2025/10/28/6900d70de5f0c.webp",
+                description: "阿什福德学园配色"
             }
         ],
         image: "https://cdn4.winhlb.com/2025/10/28/6900d70de5f0c.webp",
@@ -1194,7 +1194,7 @@ const knightmareFrames = [
             ]
         },
         design: `<p>MR-1是一种为民用设计的Knightmare Frame，其大部分装甲已被剥离。作为非战斗Knightmare，MR-1除了两个胸部安装的飞燕爪牙外没有任何进攻性武器。它唯一其他特征是陆地滑行推进系统和驾驶舱弹射系统。其性能相当于第四世代模型。</p>`,
-        combat: `<p>在第一季中，黑色骑士团使用一台黑白配色的MR-1救援枢木朱雀。它由扇要驾驶，但被库埃鲁·索雷西摧毁。在第二季中，阿什弗德学院使用紫黄配色的模型代替甘尼米德。在纪念第七骑士枢木朱雀的节日期间，第二次尝试制作世界上最大的披萨；原本计划由朱雀驾驶的MR-1被基诺·温伯格征用。当鲁路修启动灭火器隐藏C.C.的存在时，披萨再次被毁。</p>`
+        combat: `<p>在第一季中，黑色骑士团使用一台黑白配色的MR-1救援枢木朱雀。它由扇要驾驶，但被库埃鲁·索雷西摧毁。在第二季中，阿什福德学院使用紫黄配色的MR-1代替盖尼米德。在纪念第七骑士枢木朱雀的节日期间，第二次尝试制作世界上最大的披萨；原本计划由朱雀驾驶的MR-1被基诺·温伯格征用。当鲁路修启动灭火器隐藏C.C.的存在时，披萨再次被毁。</p>`
     },
     {
         id: 29,
