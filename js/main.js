@@ -12,6 +12,17 @@ class KnightmareDatabase {
         this.spriteLoaded = false; // 雪碧图加载状态
     }
 
+    // 获取雪碧图URL和尺寸
+    getSpriteConfig() {
+        const isMobile = window.innerWidth <= 768;
+        return {
+            url: isMobile 
+                ? 'https://cdn4.winhlb.com/2025/10/29/6900f9125d134.png' // 移动端小雪碧图
+                : 'https://cdn4.winhlb.com/2025/10/25/68fbc7c8bac53.png', // 桌面端大雪碧图
+            size: isMobile ? 75 : 150 // 移动端75px，桌面端150px
+        };
+    }
+
     // 应用筛选
     applyFilters(filters) {
         this.currentFilters = { ...this.currentFilters, ...filters };
@@ -72,13 +83,9 @@ class KnightmareDatabase {
         card.className = 'frame-card';
         card.href = `detail.html?id=${frame.id}`;
         
-        // 检测是否为移动端
-        const isMobile = window.innerWidth <= 768;
-        
-        // 计算雪碧图背景位置
-        // 桌面端：150x150px 每个，移动端：75x75px 每个
-        const spriteSize = isMobile ? 75 : 150;
-        const spritePosition = -spriteSize * (frame.id - 1);
+        // 获取雪碧图配置
+        const spriteConfig = this.getSpriteConfig();
+        const spritePosition = -spriteConfig.size * (frame.id - 1);
         
         card.innerHTML = `
             <div class="frame-image-container">
@@ -87,7 +94,7 @@ class KnightmareDatabase {
                     <div class="sprite-loading-spinner"></div>
                     <div>加载中...</div>
                 </div>
-                <div class="frame-image sprite-image" style="background-position: 0 ${spritePosition}px; display: none;"></div>
+                <div class="frame-image sprite-image" style="background-image: url('${spriteConfig.url}'); background-position: 0 ${spritePosition}px; display: none;"></div>
             </div>
             <div class="frame-info">
                 <h3>${frame.name_zh}</h3>
@@ -102,7 +109,7 @@ class KnightmareDatabase {
 
         // 预加载雪碧图
         const spriteImage = new Image();
-        spriteImage.src = 'https://cdn4.winhlb.com/2025/10/25/68fbc7c8bac53.png';
+        spriteImage.src = spriteConfig.url;
         spriteImage.onload = () => {
             const loadingElement = card.querySelector('.sprite-loading');
             const imageElement = card.querySelector('.frame-image');
@@ -169,5 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('search-input').addEventListener('input', (e) => {
         database.applyFilters({ search: e.target.value });
+    });
+
+    // 监听窗口大小变化，在移动端/桌面端切换时重新渲染
+    window.addEventListener('resize', () => {
+        database.renderGallery();
     });
 });
