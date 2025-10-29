@@ -131,6 +131,9 @@ function renderImageTabs(frame) {
         }];
     }
     
+    // 设置标签数量属性，用于CSS精确计算宽度
+    tabsContainer.setAttribute('data-tab-count', images.length.toString());
+    
     // 显示加载提示，隐藏图片
     loadingElement.style.display = 'flex';
     imageElement.style.display = 'none';
@@ -174,7 +177,6 @@ function renderImageTabs(frame) {
     }
 }
 
-// 其余函数保持不变...
 function renderDescription(description) {
     const descriptionContainer = document.getElementById('frame-description');
     
