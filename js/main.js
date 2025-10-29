@@ -18,7 +18,7 @@ class KnightmareDatabase {
         return {
             url: isMobile 
                 ? 'https://cdn4.winhlb.com/2025/10/29/6901ec4ca3190.webp?v=1.42' // 移动端小雪碧图
-                : 'https://s21.ax1x.com/2025/10/29/pVxouCQ.webp?v=1.42', // 桌面端大雪碧图
+                : 'https://cdn4.winhlb.com/2025/10/30/69024d5d71246.webp?v=1.42', // 桌面端大雪碧图
             size: isMobile ? 75 : 150 // 移动端75px，桌面端150px
         };
     }
@@ -183,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         database.renderGallery();
     });
 });
+
 
 
 
